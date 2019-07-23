@@ -22,16 +22,27 @@ int temp_max = 0;
 char result[10][20];
 string temp_result[10];
 
+//같은 숫자 여부
+int count_number[10];
+bool is_pair = false;
+
 int main() {
 	cin >> T;
 
-
 	for (int i = 0; i < T; i++) {
+
+		//같은 숫자 여부 파악 변수 초기화
+		for (int i = 0; i < 10; i++) {
+			count_number[i] = 0;
+		}
+
 		bool temp_is_sorted = true;
 		//정렬여부
 		is_sorted = false;
 		//현재까지 정렬 위치
 		index_ = 0;
+		//같은 숫자 여부
+		is_pair = false;
 
 		cin >> string_input;
 
@@ -51,9 +62,18 @@ int main() {
 			char * pointer_change = &change;
 			//변환 완료.
 			int_input[i] = atoi(pointer_change);
+			count_number[int_input[i]] += 1;
 		}
 		//횟수에 따라서 숫서 변경 시작
 		cin >> change_count;
+
+		//같은 숫자 여부 확인 -> 있을 시 남은 횟수 제거
+		for (int i = 0; i < 10; i++) {
+			if (count_number[i] > 1) {
+				is_pair = true;
+			}
+		}
+		
 
 		while (true) {
 			//횟수 사용 다함
@@ -63,7 +83,7 @@ int main() {
 
 			//숫자의 크기가 꼬인 부분이 하나라도 있을 시 정렬 안됨.
 			for (int i = 1; i < size; i++) {
-				if (int_input[i] < int_input[i - 1]) {
+				if (int_input[i] > int_input[i - 1]) {
 					temp_is_sorted = false;
 				}
 			}
@@ -75,7 +95,7 @@ int main() {
 				is_sorted = false;
 			}
 
-			
+
 			//정상 정렬 여부 확인(하나하나 돌렸을 경우 크기 상관없이 정상 정렬로 가정)
 			//무조건 정렬 완성
 			if (index_ >= size) {
@@ -84,57 +104,54 @@ int main() {
 			else {
 
 			}
+			
 
 			//최고 출력 시 최소화하면서 변경
 			//가장 뒤의 두 숫자를 변경
 			if (is_sorted) {
-				int temp = int_input[size - 2];
-				int_input[size - 2] = int_input[size - 1];
-				int_input[size - 1] = temp;
+				//if (is_pair) {
+				//	//정렬이 돼 있고, 같은 숫자 있으면 횟수 줄이면서 끝
+				//	break;
+				//}
+				//else {
+					int temp = int_input[size - 2];
+					int_input[size - 2] = int_input[size - 1];
+					int_input[size - 1] = temp;
+				//}
 			}
 			//최고 출력 아닐 시 최고 출력으로 정렬 시작
 			//정렬 
 			//최고숫자 1 / 그다음숫자 2 / 그다음 숫자 3 오도록 변경
-			
+
 			//구현
 			//매번 index_를 증가하며(뒤로 가면서)
 			//index_가 낮을 수록 큰 숫자가 오도록 변경
 			//뒤에있는 index_ 중 같은 제일 큰 숫자가 있을 시 뒤에있는 숫자가 앞으로 오도록 변경 
 			else {
-				while (true) {
-					temp_max = 0;
-					int start_index_ = index_;
-					int max_index_ = 0;
-					for (int i = start_index_; i < size; i++) {
-						if (temp_max <= int_input[i]) {
-							temp_max = int_input[i];
-							max_index_ = i;
-						}
+				temp_max = 0;
+				int start_index_ = index_;
+				int max_index_ = 0;
+				for (int i = start_index_; i < size; i++) {
+					if (temp_max <= int_input[i]) {
+						temp_max = int_input[i];
+						max_index_ = i;
 					}
-					if (index_ != max_index_) {
-						//정렬 진행
-						int temp = int_input[index_];
-						int_input[index_] = int_input[max_index_];
-						int_input[max_index_] = temp;
-						index_++;
-						break;
-					}
-					else {
-						//index의 크기가 전체 크기보다 작을 경우 -> 뒤로 넘어가서 정렬 재진행
-						if (index_ < size -1) {
-							index_++;
-							continue;
-						}
-						//index의 크기가 전체 크기와 같거나 클경우 -> while문 종료
-						else {
-							break;
-						}
-					}
+				}
+				if (index_ != max_index_) {
+					//정렬 진행
+					int temp = int_input[index_];
+					int_input[index_] = int_input[max_index_];
+					int_input[max_index_] = temp;
+					index_++;
+				}
+				else {
+					index_++;
+					//횟수 사용 안함
+					change_count++;
 				}
 			}
 			change_count--;
 		}
-
 		for (int j = 0; j < size; j++) {
 			char temp_char = int_input[j] + '0';
 			result[i][j] = temp_char;
