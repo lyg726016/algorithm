@@ -23,7 +23,6 @@ int rotation_count = 0;
 bool is_first = true;
 
 
-
 void clean(int x, int y) {
 	if (input_array[y][x] == NOT_CLEAN) {
 		input_array[y][x] = CLEAN;
@@ -34,6 +33,7 @@ void clean(int x, int y) {
 
 int main()
 {
+
 	//input
 	int array_y, array_x;
 	int x, y, direction;

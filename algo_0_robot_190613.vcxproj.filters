@@ -327,6 +327,12 @@
     <ClCompile Include="algo_11054_190808.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="algo_10844_190809.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_sw_1224_190809.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
