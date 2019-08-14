@@ -18,6 +18,8 @@ long long pow(int A, int B, int C)
 	}
 }
 
+
+
 int main(void)
 {
 	int A, B, C;

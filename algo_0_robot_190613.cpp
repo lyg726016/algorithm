@@ -1,13 +1,10 @@
 #include <iostream>
 
-
 using namespace std;
 
 #define NOT_CLEAN 0
 #define WALL 1
 #define CLEAN 2
-
-
 #define UPPER 0
 #define RIGHT 1
 #define DOWN 2
@@ -22,14 +19,12 @@ int input_array[MAX_SIZE][MAX_SIZE];
 int rotation_count = 0;
 bool is_first = true;
 
-
 void clean(int x, int y) {
 	if (input_array[y][x] == NOT_CLEAN) {
 		input_array[y][x] = CLEAN;
 		clean_count++;
 	}
 }
-
 
 int main()
 {

@@ -297,9 +297,6 @@
     <ClCompile Include="algo_10871_190807.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="algo_2742_190807.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="algo_2630_190807.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -331,6 +328,33 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="algo_sw_1224_190809.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_2742_190807________________.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_sw_ct_190812.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_7568_190812.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_1018_190812_____________.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_1712_190813.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_1011_190813.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_4344_190814.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_4153_190814.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_11066_190814.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
