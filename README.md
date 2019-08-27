@@ -1,4 +1,4 @@
-# algorithm
+# Algorithm
 
 
 Solution -https://www.acmicpc.net/step 
