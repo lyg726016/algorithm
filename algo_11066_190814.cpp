@@ -29,22 +29,6 @@ int main() {
 			arr_input[j] = temp;
 			pq.push(temp);
 		}
-;
-
-		while (pq.size() > 1) {
-			temp_a = pq.top();
-			pq.pop();
-			temp_b = pq.top();
-			pq.pop();
-			pq.push(temp_a + temp_b);
-
-			result += temp_a + temp_b;
-			cout << "temp_a : " << temp_a << ", temp_b : " << temp_b << '\n';
-			cout << result << '\n';
-		}
-		cout << result << '\n';
-		result = 0;
 	}
-
 	return 0;
 }
