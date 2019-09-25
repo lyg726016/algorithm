@@ -23,7 +23,5 @@ int main() {
 			cout << aa << '\n';
 		}
 	}
-
-
 	return 0;
 }
