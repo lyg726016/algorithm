@@ -74,6 +74,14 @@ int main() {
 			map[input_y][input_x] = 1;
 		}
 
+			/*for (int i = 0; i < N; i++) {
+				for (int j = 0; j < M; j++) {
+					cout << map[i][j] << " ";
+				}
+				cout << endl;
+			}*/
+
+
 		dfs(t);
 		memset(map, 0, sizeof(map));
 	}

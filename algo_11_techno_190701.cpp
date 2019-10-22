@@ -92,6 +92,7 @@ int main() {
 			}
 
 			//pink
+
 			if (i + 2 <= y && j - 1 >= 1 && j - 1 <= x) {
 				temp = input_array_a[i][j] + input_array_a[i + 1][j] + input_array_a[i + 2][j] + input_array_a[i + 1][j - 1];
 				result_max = get_max(temp, result_max);

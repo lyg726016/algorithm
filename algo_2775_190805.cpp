@@ -23,7 +23,6 @@ int main() {
 			for (int j = 1; j <= 14; j++) {
 				for (int k = 1; k <= j; k++) {
 					temp_sum += count_person[i - 1][k];
-
 				}
 				count_person[i][j] = temp_sum;
 				temp_sum = 0;

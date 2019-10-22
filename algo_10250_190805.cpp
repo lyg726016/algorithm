@@ -10,10 +10,6 @@ int input_n;
 int result_cmd;
 int result_gh;
 
-int skajwl;
-int sksnrl;
-int ckdl;
-
 int gh_max[100];
 
 int main() {

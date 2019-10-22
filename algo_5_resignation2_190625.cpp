@@ -53,7 +53,6 @@ int main() {
 				//손해 -> 추가 안함
 				else
 					max_profit[i] = max_profit[i + 1];
-					
 			}
 			else {
 				//현재 일이 마지막 날까지의 일일 때

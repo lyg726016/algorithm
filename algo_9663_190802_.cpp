@@ -40,6 +40,23 @@ void check_map(int y, int x) {
 	}
 }
 
+//void check_map(int y, int x) {
+//	map[y][x] = true;
+//
+//	for (int i = 0; i < 8; i++) {
+//		int c_x = x;
+//		int c_y = y;
+//		while (true) {
+//			y += dir[i][0];
+//			x += dir[i][1];
+//			if (y > input_n || x > input_n || x <= 0 || y <= 0)break;
+//			map[y][x] = true;
+//		}
+//		x = c_x;
+//		y = c_y;
+//	}
+//}
+
 void solve(int y, int count_q) {
 	if (count_q == input_n) {
 		result++;
@@ -47,7 +64,6 @@ void solve(int y, int count_q) {
 	}
 
 	bool cpy_map[16][16] = { 0, };
-
 	memcpy(cpy_map, map, sizeof(map));
 
 	for (int i = 1; i <= input_n; i++) {
@@ -58,7 +74,6 @@ void solve(int y, int count_q) {
 			memcpy(map, cpy_map, sizeof(map));
 		}
 	}
-
 }
 
 

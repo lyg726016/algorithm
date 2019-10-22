@@ -32,6 +32,8 @@ void func(int k) {
 }
 
 int main(void) {
+	
+
 	cin >> n >> m;
 
 	int temp_input;
